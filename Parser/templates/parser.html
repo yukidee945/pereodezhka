@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+from parser1 import pars
+{% block title %}
+Найти товар
+{% endblock %}
+
+{% block body %}
+Тут пися пока туда сюда
+{% for msg in get_flashed_messages() %}
+<div class="flash">{{msg}}</div>
+{% endfor %}
+
+<form action="/find" method="post">
+<p><label for=""><input type="text" name="message"></label></p>
+<br>
+<input type="submit" value="Найти">
+</form>
+{% endblock %}
